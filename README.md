@@ -1,5 +1,6 @@
+# Currency Exchange System
 
-# Compilation Instructions:
+## Compilation Instructions:
 
 Run the following commands on the terminal:
 
@@ -7,16 +8,16 @@ Run the following commands on the terminal:
     ./a.out
     <instruction>
 
-# Compilation instructions for input generation:
+## Compilation instructions for input generation:
 
 Run the following commands on the terminal:
 
     gcc input_generator.c
     ./a.out > gen_input.txt
    
-# The functions in our program are:
+## Functions
 
-## 1. To add a trade bank:
+### 1. To add a trade bank:
   - input : add_trade_bank <bankname (string)>
   - output : 
 
@@ -29,7 +30,7 @@ Run the following commands on the terminal:
 
              Done
 
-## 2. To delete a trade bank:
+### 2. To delete a trade bank:
   - input : delete_trade_bank <bankname (string)>
   - output : 
 
@@ -42,7 +43,7 @@ Run the following commands on the terminal:
      
              Done
      
-## 3. To add a currency:
+### 3. To add a currency:
   - input : add_currency <bankname (string)> <currencyname (string)>
   - output :
 
@@ -60,7 +61,7 @@ Run the following commands on the terminal:
 
              Done
 
- ## 4. To delete a currency
+ ### 4. To delete a currency
    - input : delete_currency <bankname (string)> <currencyname (string)>
    - output :
 
@@ -78,7 +79,7 @@ Run the following commands on the terminal:
 
              Done         
 
- ## 5. To add conversion between two currencies
+ ### 5. To add conversion between two currencies
    - input : add_conversion <bankname (string)> <sourcecurrency (string)> <destinationcurrency (string)> <weight (long int)>
    - output :
 
@@ -101,7 +102,7 @@ Run the following commands on the terminal:
 
              Done
 
- ## 6. To delete conversion between two currencies         
+ ### 6. To delete conversion between two currencies         
    - input : delete_conversion <bankname (string)> <sourcecurrency (string)> <destinationcurrency (string)>
    - output :
 
@@ -124,7 +125,7 @@ Run the following commands on the terminal:
 
              Done
 
-## 7. To print a trade bank
+### 7. To print a trade bank
   - input : print_trade_bank <bankname (string)>
   - output :
 
@@ -150,7 +151,7 @@ Run the following commands on the terminal:
              .
              .
 
-## 8. To print best path between two currencies
+### 8. To print best path between two currencies
   - input : best_path <sourcecurrency (string)> <destinationcurrency (string)>
   - output : 
 
@@ -163,7 +164,7 @@ Run the following commands on the terminal:
              The best path from <sourcecurrency> to <destinationcurrency> is : <sourcecurrency> -> ... -> <destinationcurrency>
              The cost of best path is <shortestpathlength (long int)> : from the trade bank <bestbankname (string)>
 
-## 9. To print second best path between two currencies
+### 9. To print second best path between two currencies
   - input : second_best_path <sourcecurrency (string)> <destinationcurrency (string)>
   - output : 
 
@@ -176,7 +177,7 @@ Run the following commands on the terminal:
              The 2nd best path from <sourcecurrency> to <destinationcurrency> is : <sourcecurrency> -> ... -> <destinationcurrency>
              The cost of 2nd best path is <shortestpathlength (long int)> : from the trade bank <bestbankname (string)>
 
-## 10. To find whether a given trade bank has a cycle or not
+### 10. To find whether a given trade bank has a cycle or not
   - input : find_cycle <bankname (string)>
   - output :
 
@@ -188,11 +189,11 @@ Run the following commands on the terminal:
 
              The cycle is: <currency1 (string)> <currency2 (string)> . . .
 
-## 11. To exit the program
+### 11. To exit the program
   - input : exit
   - output : Have a nice day!
 
-# Limitations of our code
+## Limitations of our code
 
 1. We can't add a conversion which has a conversion rate greater than infinity.
 2. We can't add more than 10^6 trade banks, because that exceeds the memory limit of the stack on the local machine.
