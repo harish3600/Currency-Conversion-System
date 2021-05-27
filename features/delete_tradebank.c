@@ -1,3 +1,6 @@
+//this function is used to delete a whole tradebank
+//it also frees memory allocated to all currency nodes in the trade bank
+
 void delete_trade_bank(graph g, char *bank_name)
 {
     //compurtes the stringhash of bank name
