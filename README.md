@@ -1,6 +1,6 @@
 # Currency Conversion System
 
-
+A C-language Project that implements essential functions for a Currency Conversion System by using the data taken from the user.
 
 ## Compilation Instructions:
 
